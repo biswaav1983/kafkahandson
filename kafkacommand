@@ -1,0 +1,16 @@
+Note: In client Host Download kafka and set the /bin folder as environment variables
+
+bin/kafka-topics.sh --bootstrap-server localhost:29092 --create --topic test-rep3 --replication-factor 3 --partitions 2
+
+bin/kafka-topics.sh --bootstrap-server localhost:29092 --describe --topic test-rep3
+
+bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:29092 
+
+bin/kafka-console-consumer.sh --topic quickstart-events --bootstrap-server localhost:29092 
+
+
+Running Kafka with Docker (SSL)
+
+bin/kafka-console-producer.sh --topic test --bootstrap-server localhost:29093 --producer.config /home/User_name/secrets/client-ssl.properties
+
+bin/kafka-console-consumer.sh --topic test --bootstrap-server localhost:29093 --consumer.config /home/User_name/secrets/client-ssl.properties
