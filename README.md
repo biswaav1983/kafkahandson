@@ -2,7 +2,7 @@
 Practical Demo for setup Kafka in containers and SSl configuration steps
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-In this Demo We have to docker-compose.yml file for Kafka setup with SSL and with out SSL.
+In this Demo We have two docker-compose.yml file for Kafka setup with SSL and with out SSL.
 
 Prerequisite
 ***********
