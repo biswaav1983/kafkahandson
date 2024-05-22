@@ -27,3 +27,5 @@ version: '2.1'
 
 References:
 https://github.com/apache/kafka/blob/trunk/docker/examples/jvm/cluster/combined/ssl/docker-compose.yml
+https://medium.com/@cesantin/kafka-brokers-and-zookeeper-7447009637f4
+https://www.scaler.com/topics/kafka-tutorial/the-role-of-zookeeper-in-the-kafka-cluster/

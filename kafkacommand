@@ -14,3 +14,34 @@ Running Kafka with Docker (SSL)
 bin/kafka-console-producer.sh --topic test --bootstrap-server localhost:29093 --producer.config /home/User_name/secrets/client-ssl.properties
 
 bin/kafka-console-consumer.sh --topic test --bootstrap-server localhost:29093 --consumer.config /home/User_name/secrets/client-ssl.properties
+
+
+To check if the Zookeeper cluster is ready, you can send a command requesting the status of each Zookeeper instance and filtering by its mode,
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+echo stat | nc localhost 22181 | grep Mode
+
+Creating topics for the experiment
+
+kafka-topics.sh --zookeeper localhost:22181 --create --topic topic-test-v1 --replication-factor 3 --partitions 3 --if-not-exists 
+Issue: Exception in thread "main" joptsimple.UnrecognizedOptionException: zookeeper is not a recognized option
+
+Soln: kafka-topics.sh --bootstrap-server localhost:19092  --create --topic topic-test-v1 --replication-factor 3 --partitions 3 --if-not-exists
+
+kafka-topics.sh --bootstrap-server localhost:29092 --create --topic topic-test-v2 --replication-factor 2 --partitions 2 --if-not-exists
+
+List the Topics
+kafka-topics.sh --bootstrap-server localhost:39092 --list topics
+
+Describe the topics
+kafka-topics.sh --bootstrap-server localhost:39092 --describe --topic topic-test-v1
+
+zookeeper-shell Command
+Most Kafka distributions are shipped with either zookeeper-shell or zookeeper-shell.sh binary. So, it’s a de facto standard to use this binary to interact with the Zookeeper server.
+
+First, let’s connect to the Zookeeper server running at localhost:<zk_client:port>  /usr/local/bin/zookeeper-shell localhost:2181
+
+ls /brokers/ids
+ls /brokers/topics #Gives the list of topics
+get /brokers/ids/0 #Gives more detailed information of the broker id '0'
+
