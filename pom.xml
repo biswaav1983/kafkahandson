@@ -6,18 +6,7 @@
 
     <groupId>com.ryanplant.kafka.getting-started</groupId>
     <artifactId>basic-kafka-producer</artifactId>
-    <version>0.1-SNAPSHOT</version>
-    <name>kafka-client</name>
-	
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <kafka.version>3.5.1</kafka.version>
-        <avro.version>1.10.1</avro.version>
-        <confluent.version>7.4.1</confluent.version>
-    </properties>	    
-
+    <version>1.0</version>
 
     <dependencies>
         <dependency>
@@ -25,58 +14,21 @@
             <artifactId>kafka-clients</artifactId>
             <version>0.10.0.1</version>
         </dependency>
-     </dependencies>
-
-     <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <artifactId>maven-clean-plugin</artifactId>
-                    <version>3.0.0</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-resources-plugin</artifactId>
-                    <version>3.0.2</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.0</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.20.1</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <version>3.0.2</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-install-plugin</artifactId>
-                    <version>2.5.2</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-deploy-plugin</artifactId>
-                    <version>2.8.2</version>
-                </plugin>
-
-           
-                <plugin>
-               	 	<groupId>org.apache.maven.plugins</groupId>
-                	<artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            	</plugin>
-
-            	<plugin>
-                <groupId>org.apache.maven.plugins</groupId>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.1</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.3.0</version>
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>ProducerApp</mainClass> <!-- Replace with your main class -->
+                            <addClasspath>true</addClasspath>
+                            <mainClass>com.shash.kafka.ProducerApp</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
@@ -85,7 +37,7 @@
                 </configuration>
                 <executions>
                     <execution>
-                        <id>make-assembly</id>
+
                         <phase>package</phase>
                         <goals>
                             <goal>single</goal>
@@ -93,10 +45,7 @@
                     </execution>
                 </executions>
             </plugin>
-      </plugins>
-   </pluginManagement>	    
-  </build>
-
-
+        </plugins>
+    </build>
 
 </project>

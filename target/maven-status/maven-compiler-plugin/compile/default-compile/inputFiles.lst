@@ -1,4 +1,4 @@
-/home/avpp/kafka/src/main/java/ConsumerApp.java
-/home/avpp/kafka/src/main/java/ConsumerGroupApp.java
-/home/avpp/kafka/src/main/java/ProducerApp.java
-/home/avpp/kafka/src/main/java/BatchProducerApp.java
+/home/secops/kafka/src/main/java/com/shash/kafka/BatchProducerApp.java
+/home/secops/kafka/src/main/java/com/shash/kafka/ConsumerApp.java
+/home/secops/kafka/src/main/java/com/shash/kafka/ConsumerGroupApp.java
+/home/secops/kafka/src/main/java/com/shash/kafka/ProducerApp.java

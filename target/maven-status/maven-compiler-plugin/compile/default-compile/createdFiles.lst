@@ -1,4 +1,4 @@
-ConsumerApp.class
-BatchProducerApp.class
-ConsumerGroupApp.class
-ProducerApp.class
+com/shash/kafka/ConsumerApp.class
+com/shash/kafka/ConsumerGroupApp.class
+com/shash/kafka/BatchProducerApp.class
+com/shash/kafka/ProducerApp.class
