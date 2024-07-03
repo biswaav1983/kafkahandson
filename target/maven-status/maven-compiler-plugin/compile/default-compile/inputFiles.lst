@@ -1,4 +1,4 @@
-/home/secops/kafkahandson/src/main/java/com/shash/kafka/ConsumerGroupApp.java
-/home/secops/kafkahandson/src/main/java/com/shash/kafka/ProducerApp.java
-/home/secops/kafkahandson/src/main/java/com/shash/kafka/BatchProducerApp.java
-/home/secops/kafkahandson/src/main/java/com/shash/kafka/ConsumerApp.java
+/home/avpp/kafkahandson/src/main/java/com/shash/kafka/BatchProducerApp.java
+/home/avpp/kafkahandson/src/main/java/com/shash/kafka/ProducerApp.java
+/home/avpp/kafkahandson/src/main/java/com/shash/kafka/ConsumerGroupApp.java
+/home/avpp/kafkahandson/src/main/java/com/shash/kafka/ConsumerApp.java

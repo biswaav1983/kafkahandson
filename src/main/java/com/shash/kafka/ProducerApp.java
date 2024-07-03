@@ -31,9 +31,9 @@ public class ProducerApp {
 
         KafkaProducer<String, String> myProducer = new KafkaProducer<String, String>(props);
         DateFormat dtFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss:SSS");
-        String topic = "my-topic-1";
+        String topic = "my-topic";
 
-        int numberOfRecords = 10; // number of records to send
+        int numberOfRecords = 20; // number of records to send
         long sleepTimer = 0; // how long you want to wait before the next record to be sent
         System.out.println("producer publishing data");
         try {
